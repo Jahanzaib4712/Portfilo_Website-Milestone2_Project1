@@ -40,3 +40,413 @@ a {
     color-scheme: dark;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container::before{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #16c3d6;
+}
+.container .hero{
+  position: relative;
+  z-index: 10;
+  width: 75%;
+  height: 85vh;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(25px);
+  border: 3px solid #018492;
+  border-radius: 20px;
+  box-shadow: -15px 17px 17px rgba(10,10,10,0.15);
+  padding: 0 40px 0 80px;
+}
+.hero nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+}
+.hero nav .logo{
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+.hero nav .nav-links a{
+  color: #242424;
+  margin-left: 30px;
+  transition: 0.3s;
+}
+.hero nav .nav-links a:hover,
+.hero nav .nav-links a.active{
+  color: #16c3d6;
+}
+.hero .content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 40px;
+}
+.hero .content .div-text{
+  width: 40%;
+}
+.hero .content .div-img{
+  position: absolute;
+  top: 180px;
+  right: 130px;
+  width: 30%;
+}
+.hero .content .div-img img{
+  width: 100%;
+}
+.hero .content .div-text h1{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 50px;
+  color: #444;
+}
+.hero .content .div-text h4{
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #fff;
+}
+.hero .content .div-text p{
+  color: #444;
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+.hero .content .div-text .btn{
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #444;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.hero .content .div-text .btn:hover{
+  background-color: transparent;
+  color: #fff;
+}
+.soc-links{
+  position: absolute;
+  top: 50%;
+  right: 45px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+.soc-links a i{
+  font-size: 25px;
+  color: #444;
+  margin-bottom: 25px;
+  transition: 0.4s;
+}
+.soc-links a i:hover{
+  color: #16c3d6;
+}
+/* animation */
+.hero .logo,
+.hero .content .div-text h1,
+.hero .content .div-text h4,
+.hero .content .div-text .btn{
+  position: relative;
+  top: 50px;
+  animation: slide-top 0.5s linear forwards;
+  opacity: 0;
+}
+.hero .logo{
+  animation-delay: 0.2s;
+}
+.hero .content .div-text h1{
+  animation-delay: 0.5s;
+}
+.hero .content .div-text h4{
+  animation-delay: 0.9s;
+}
+.hero .content .div-text .btn{
+  animation-delay: 1.8s;
+}
+@keyframes slide-top{
+  0%{
+      top: 50px;
+      opacity: 0;
+  }
+  100%{
+      top: 0;
+      opacity: 1;
+  }
+}
+.hero .content .div-text p{
+  position: relative;
+  left: 100px;
+  animation: slide-right 0.5s linear forwards;
+  opacity: 0;
+  animation-delay: 1.3s;
+}
+@keyframes slide-right{
+  0%{
+      left: 100px;
+      opacity: 0;
+  }
+  100%{
+      left: 0;
+      opacity: 1;
+  }
+}
+.hero .content .div-img img{
+  transform: scale(0.8);
+  animation: fade-img 0.5s linear forwards;
+  animation-delay: 2.1s;
+  opacity: 0;
+}
+@keyframes fade-img{
+  0%{
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  100%{
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+
+
+
+
+
+/* About.module.css */
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-section, .skills-section, .experience-section, .projects-section {
+  width: 80%;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.about-section:hover, .skills-section:hover, .experience-section:hover, .projects-section:hover {
+  transform: scale(1.02);
+}
+
+h1, h2 {
+  color: #4a90e2;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+h1::after, h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: #4a90e2;
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 5px;
+}
+
+p, ul, li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.skills-section ul, .projects-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-section li, .projects-section li {
+  padding: 0.5rem 0;
+}
+
+.projects-section li strong {
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sky-blue background for the page */
+.container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e0f7fa; /* Sky Blue */
+  padding: 0 20px;
+}
+
+/* Styling for the form container */
+.form-container3 {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Title of the page */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00796b; /* Dark teal */
+}
+
+/* Description text */
+p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #00796b;
+}
+
+/* Form styling */
+.form3 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input and textarea styling */
+.input-group3 {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1rem;
+  color: #00796b;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #00796b;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Focus effect on inputs and textareas */
+input:focus,
+textarea:focus {
+  border-color: #004d40; /* Dark teal */
+}
+
+/* Submit button styling */
+.submit-btn3 {
+  padding: 12px 20px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect on the submit button */
+.submit-btn3:hover {
+  background-color: #004d40; /* Dark teal */
+}
+
+
+
+
+
+
+
+
+
+
+.back-home-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #ff7043; /* Orange color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hover effect for the Back to Home button */
+.back-home-btn:hover {
+  background-color: #d84b2a; /* Darker orange */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Focus effect for the Back to Home button */
+.back-home-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 112, 67, 0.6); /* Glow effect */
+}
